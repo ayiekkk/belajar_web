@@ -6,17 +6,22 @@
 
 body {
     font-family: "Oxanium", serif;
-    /* background: radial-gradient(circle, rgba(23, 21, 59, 1) 40%, #4F1787); */
+    background: rgb(67, 61, 139);
+    background: -moz-linear-gradient( rgba(67, 61, 139, 1) 20%, rgba(255, 255, 255, 1) 80%);
+    background: -webkit-linear-gradient( rgba(67, 61, 139, 1) 20%, rgba(255, 255, 255, 1) 80%);
+    background: linear-gradient( rgba(67, 61, 139, 1) 20%, rgba(255, 255, 255, 1) 80%);
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 .title {
     text-align: center;
-    margin-top: 1.5em;
+    margin-top: 3em;
+    color: #EEEEEE;
 }
 
 .title span {
     display: block;
-    color: #574964;
 }
 
 .gambar {
@@ -26,6 +31,7 @@ body {
     min-height: 50vh;
     margin-bottom: 50px;
     filter: drop-shadow(0px 0px 18px grey);
+    animation: glow 1s infinite alternate;
 }
 
 .buttons {
@@ -66,4 +72,9 @@ button:active {
     background-color: #888;
     height: 60px;
     margin: 0 20px;
+}
+
+@keyframes glow {
+    0% { filter :drop-shadow(0 0 8px #fff)}
+    100% { filter :drop-shadow(0 0 15px #fff) }
 }
